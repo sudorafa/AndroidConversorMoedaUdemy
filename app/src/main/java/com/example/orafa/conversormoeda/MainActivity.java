@@ -7,8 +7,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-//terceiro método para onclick>implements View.OnClickListener
-
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private ViewHolder nViewHolder = new ViewHolder();
@@ -23,29 +21,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.nViewHolder.textEuro = (TextView)findViewById(R.id.text_euro);
         this.nViewHolder.buttomCalculate = (Button) findViewById(R.id.button_calculate);
 
-        //segundo método para onclick
-        this.nViewHolder.buttomCalculate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //lógica para o método dois
-            }
-        });
-
-        //terceiro método
         this.nViewHolder.buttomCalculate.setOnClickListener(this);
+
+        this.clearValues();
     }
 
-    public void teste(View view) {
-        //lógica para o botão. Prrimeiro método
+    private void clearValues() {
+        this.nViewHolder.textDollar.setText("");
+        this.nViewHolder.textEuro.setText("");
     }
 
-    @Override
-    public void onClick(View v) {
-        int id = v.getId();
+    public void onClick(View view) {
+        int id = view.getId();
         if(id == R.id.button_calculate){
-            //lógic para o botão. terceiro métodp
+            Double value = Double.valueOf(this.nViewHolder.editValue.getText().toString());
+            this.nViewHolder.textDollar.setText(String.format("%,2f", value*3));
+            this.nViewHolder.textEuro.setText(String.format("%,2f", value*4));
+
         }
     }
+
 
     private static class ViewHolder{
         EditText editValue;

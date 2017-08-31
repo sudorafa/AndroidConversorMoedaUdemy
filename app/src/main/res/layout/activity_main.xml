@@ -39,12 +39,10 @@
         android:layout_height="wrap_content"
         android:text="@string/valor_em_euro" />
 
-    // android:onClick="teste" para o priqmeiro método onClick no activity main
     <Button
         android:id="@+id/button_calculate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/calcular"
-        android:onClick="teste" />
+        android:text="@string/calcular" />
     
 </LinearLayout>
