@@ -11,38 +11,51 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/valor_em_real" />
+        android:text="@string/valor_em_real"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:layout_marginTop="10dp"/>
 
     <EditText
         android:id="@+id/edit_value"
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:hint="@string/valor"/>
+        android:inputType="numberSigned"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:paddingTop="10dp"
+        android:textSize="30sp"
+        android:textAlignment="center"/>
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/valor_em_dollar" />
+        android:text="@string/valor_em_dollar"
+        android:layout_marginTop="50dp"/>
     <TextView
         android:id="@+id/text_dollar"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/valor_em_dollar" />
+        android:textSize="25sp"
+        android:paddingTop="10dp"/>
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/valor_em_euro" />
+        android:text="@string/valor_em_euro"
+        android:layout_marginTop="50dp"/>
     <TextView
         android:id="@+id/text_euro"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/valor_em_euro" />
+        android:textSize="25sp"
+        android:paddingTop="10dp"/>
 
     <Button
         android:id="@+id/button_calculate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
         android:text="@string/calcular" />
     
 </LinearLayout>
