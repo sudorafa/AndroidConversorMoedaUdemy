@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Double value = Double.valueOf(this.nViewHolder.editValue.getText().toString());
             this.nViewHolder.textDollar.setText(String.format("%.2f", value * 3));
             this.nViewHolder.textEuro.setText(String.format("%.2f", value * 4));
-
         }
     }
 
